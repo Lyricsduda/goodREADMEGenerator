@@ -55,3 +55,58 @@ inquirer
         console.log("GENERATING README...");
         // Variable to always make the License user prompt uppercase 
         var readmeLicenseUpperCase = response.readmeLicense.toUpperCase();
+        const fileTest = `
+
+# ${response.readmeName}
+
+![License: ${readmeLicenseUpperCase}](https://img.shields.io/badge/License-${readmeLicenseUpperCase}-blue.svg)
+
+(https://opensource.org/licenses/${readmeLicenseUpperCase})
+
+## Description
+${response.readmeDescription}
+
+## Table of Contents
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+         
+ * [License](#license)
+        
+* [Contributing](#contributing)
+         
+ * [Tests](#tests) 
+         
+* [Questions](#questions) 
+
+## Installation
+
+To install necessary dependencies, run the following command:
+
+> ${response.readmeDependencies}
+
+## Usage
+
+${response.readmeUsing}
+
+## License
+
+This project is under the ${readmeLicenseUpperCase} license.
+
+## Contributing
+        
+> ${response.readmeContributing}
+
+## Tests
+
+To run test's, run the following command:
+
+${response.readmeTests}
+
+## Questions
+        
+If you have any questions about the repo, open an issue or contact me directly at ${response.readmeEmail}. You can find more
+of my work at [${response.readmeUsername}](https://github.com/${response.readmeUsername}).
+        
+`
