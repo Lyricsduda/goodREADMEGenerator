@@ -51,4 +51,7 @@ inquirer
             name: "readmeContributing"
         },
 
-    ])
+    ]).then(function (response) {
+        console.log("GENERATING README...");
+        // Variable to always make the License user prompt uppercase 
+        var readmeLicenseUpperCase = response.readmeLicense.toUpperCase();
