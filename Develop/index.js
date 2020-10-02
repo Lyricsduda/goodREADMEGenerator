@@ -103,7 +103,7 @@ This project is under the ${readmeLicenseUpperCase} license.
 
 To run test's, run the following command:
 
-${response.readmeTests}
+> ${response.readmeTests}
 
 ## Questions
         
