@@ -55,6 +55,7 @@ inquirer
         console.log("GENERATING README...");
         // Variable to always make the License user prompt uppercase 
         var readmeLicenseUpperCase = response.readmeLicense.toUpperCase();
+        // Variable to create the README information
         const fileTest = `
 
 # ${response.readmeName}
@@ -110,3 +111,9 @@ If you have any questions about the repo, open an issue or contact me directly a
 of my work at [${response.readmeUsername}](https://github.com/${response.readmeUsername}).
         
 `
+        fs.writeFile("README.md", fileTest, function (err) {
+            if (err) {
+                return console.log(err);
+            }
+        });
+    });
